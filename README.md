@@ -13,5 +13,5 @@ Make sure you have the following tools installed:
 - Java 8 or above
 - Maven or any other dependency management tool for downloading libraries.
 - The following external libraries:
-1. OpenCSV for CSV export: https://opencsv.sourceforge.net/
-2. Gson for JSON export: https://github.com/google/gson
+  1. OpenCSV for CSV export: https://opencsv.sourceforge.net/
+  2. Gson for JSON export: https://github.com/google/gson
