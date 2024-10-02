@@ -1,9 +1,12 @@
-package toDoItems;
+package toDoItems.src.toDoItems;
 
 import com.google.gson.Gson;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
+
+import com.google.gson.reflect.TypeToken;
 
 public class ExportAsJSON implements FileExporter {
 
@@ -11,7 +14,8 @@ public class ExportAsJSON implements FileExporter {
 		
 		Gson gson = new Gson();
 		
-		String output = gson.toJson(toDoItems.toDoItems);
+		var output = gson.toJson(toDoItems);
+
 		
 		try(FileWriter writer = new FileWriter("output.json")) {
 			

@@ -1,4 +1,4 @@
-package toDoItems;
+package toDoItems.src.toDoItems;
 
 import com.opencsv.CSVWriter;
 import java.io.FileWriter;
@@ -12,7 +12,14 @@ public class ExportAsCSV implements FileExporter {
 		try(CSVWriter writer = new CSVWriter(new FileWriter("output.csv"))) {
 			
 			writer.writeNext(new String[] {"ID", "Title", "Description"});
-			writer.writeAll(toDoItems.toDoItems);
+
+			for (ToDo item : toDoItems) {
+				writer.writeNext(new String[]{
+					String.valueOf(item.getID()),
+					item.getTitle(),
+					item.getDescription()
+				});
+			}
 		}
 		
 		catch(IOException exception) {
