@@ -3,10 +3,11 @@ package toDoItems;
 import com.google.gson.Gson;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class ExportAsJSON implements FileExporter {
 
-	public void export(ToDo toDoItems) {
+	public void export(ArrayList<ToDo> toDoItems) {
 		
 		Gson gson = new Gson();
 		
